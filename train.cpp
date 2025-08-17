@@ -1,6 +1,39 @@
 #include<iostream>
 using namespace std;
 
+
+void ticketCheck()
+{
+    cout<<"\n--------Ticket Check--------"<<endl;
+    cout<<"\nTicket check by the inspector\n";
+    cout<<"\nDo you have a discount ticket? (yes/no): ";
+    string ticket;
+    cin>>ticket;
+    if(ticket == "yes")
+    {
+        cout<<"\nShow valid documents for the discount ticket\n";
+    }
+    else
+    {
+        cout<<"\nShow valid documents for the normal ticket\n";
+    }
+    while(true)
+    {
+        cout<<"\nHas your destination arrived? (yes/no): ";
+        string des;
+        cin>>des;
+        if(des=="yes")
+        {
+            cout<<"Leave the train at your destination\n";
+            break;
+        }
+        else
+        {
+            cout<<"Continue your journey\n";
+        }
+    }
+}
+
 void boardTrain()
 {
     cout<<"\n--------Boarding the Train--------"<<endl;
@@ -56,4 +89,5 @@ int main()
     cout<<"Buying a train ticket"<<endl;
     reservation();
     boardTrain();
+    ticketCheck();
 }
