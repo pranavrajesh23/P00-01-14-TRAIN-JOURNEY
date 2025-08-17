@@ -1,6 +1,22 @@
 #include<iostream>
 using namespace std;
 
+void boardTrain()
+{
+    cout<<"\n--------Boarding the Train--------"<<endl;
+    cout<<"\nDo you have a reservation? (yes/no): ";
+    string board;
+    cin>>board;
+    if(board == "yes")
+    {
+        cout<<"\nLook for the reserved seat\n";
+    }
+    else
+    {
+        cout<<"\nLook for any unreserved seat\n";
+    }
+}
+
 void collectTicket()
 {
     cout<<"\n--------Ticket Collection--------"<<endl;
@@ -39,4 +55,5 @@ int main()
     cout<<"--------Train Journey--------"<<endl;
     cout<<"Buying a train ticket"<<endl;
     reservation();
+    boardTrain();
 }
